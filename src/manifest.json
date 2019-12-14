@@ -1,6 +1,6 @@
 {
-    "short_name": "Github Profile",
-    "name": "Your Profile Website",
+    "short_name": "github-profile",
+    "name": "my-profile-website",
     "icons": [
       {
         "src": "favicon.ico",
