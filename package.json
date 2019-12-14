@@ -5,7 +5,7 @@
     "main": "src/index.js",
     "scripts": {
         "start": "parcel src/index.html",
-        "build": "parcel build src/index.html"
+        "build": "parcel build src/index.html --out-dir=./"
     },
     "repository": {
         "type": "git",
@@ -19,7 +19,7 @@
     "bugs": {
         "url": "https://github.com/kdashivantha/kdashivantha.github.io/issues"
     },
-    "homepage": "https://github.com/kdashivantha/kdashivantha.github.io#readme",
+    "homepage": "https://kdashivantha.github.io/",
     "dependencies": {
         "components": "^0.1.0",
         "react": "^16.8.4",
