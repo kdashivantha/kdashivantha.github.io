@@ -1,0 +1,109 @@
+@import "./assets/styles/octicon.css";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background: #fafbfc;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+a {
+    color: #0366d6;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+.text-gray {
+    color: #586069;
+}
+
+.pb-10 {
+    padding-bottom: 10px;
+}
+
+.pt-10 {
+    padding-top: 10px;
+}
+
+.pb-15 {
+    padding-bottom: 15px;
+}
+
+.pt-15 {
+    padding-top: 15px;
+}
+
+#app {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.aside-bio {
+    background: #fff;
+    display: flex;
+}
+
+.main-details {
+    padding: 25px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.section-heading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .section-heading-container {
+        margin: 15px;
+        border-bottom: 1px solid #e1e4e8;
+    }
+}
+
+
+/* main part */
+
+
+/* iPads and above*/
+
+@media only screen and (min-width: 1024px) {
+    .container {
+        flex-direction: row;
+        align-items: stretch;
+        height: 100%;
+        width: 100%;
+    }
+    .aside-bio {
+        align-self: stretch;
+        width: 25%;
+    }
+    .main-details {
+        flex-basis: 75%;
+        align-self: stretch;
+    }
+    .repo-flex-container {
+        .repo-component {
+            flex-basis: calc(50% - 60px);
+        }
+    }
+}

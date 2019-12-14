@@ -1,0 +1,32 @@
+{
+    "name": "github-profile",
+    "version": "1.0.0",
+    "description": "https://kdashivantha.github.io/",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "parcel src/index.html",
+        "build": "parcel build src/index.html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kdashivantha/kdashivantha.github.io.git"
+    },
+    "keywords": [
+        "github-profile"
+    ],
+    "author": "KD Amith Shivantha",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/kdashivantha/kdashivantha.github.io/issues"
+    },
+    "homepage": "https://github.com/kdashivantha/kdashivantha.github.io#readme",
+    "dependencies": {
+        "components": "^0.1.0",
+        "react": "^16.8.4",
+        "react-dom": "^16.8.4"
+    },
+    "devDependencies": {
+        "parcel-bundler": "^1.12.2",
+        "sass": "^1.23.7"
+    }
+}
