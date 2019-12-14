@@ -44,7 +44,7 @@ class App extends Component {
   }
   
   getUserRepo(userName) {
-    fetch(`https://api.github.com/users/${userName}/repos?per_page=100`)
+    fetch(`https://api.github.com/users/${userName}/repos?per_page=100&sort=interactions-desc`)
       .then(res => res.json())
       .then(
         (result) => {

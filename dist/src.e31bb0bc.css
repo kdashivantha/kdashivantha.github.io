@@ -1447,7 +1447,7 @@ code {
 }
 
 a {
-  color: #0366d6;
+  color: #00a181;
   text-decoration: none;
 }
 a:hover {
@@ -1546,7 +1546,7 @@ a:hover {
   display: inline-flex;
   width: 100%;
   height: 160px;
-  background-color: #0366d6;
+  background-color: #3ac8ac;
 }
 #card-user .header h4 {
   width: 100%;
@@ -1633,7 +1633,7 @@ a:hover {
 }
 .repo-flex-container .repo-component .repo-component-detail .demo-link {
   font-size: 0.8em;
-  color: #0366d6;
+  color: #00a181;
   font-weight: 600;
 }
 .repo-flex-container .repo-component .repo-component-meta {
@@ -1650,7 +1650,7 @@ a:hover {
   margin-right: 5px;
 }
 .repo-flex-container .repo-component .repo-component-meta .repo-component__lang {
-  border: 1px solid #2271d9;
+  border: 1px solid #00a181;
   font-size: 11px;
   padding: 3px 7px 4px;
   border-radius: 16px;

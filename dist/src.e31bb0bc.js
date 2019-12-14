@@ -32284,7 +32284,7 @@ function (_Component) {
     value: function getUserRepo(userName) {
       var _this3 = this;
 
-      fetch("https://api.github.com/users/".concat(userName, "/repos?per_page=100")).then(function (res) {
+      fetch("https://api.github.com/users/".concat(userName, "/repos?per_page=100&sort=interactions-desc")).then(function (res) {
         return res.json();
       }).then(function (result) {
         _this3.setState({
@@ -32477,7 +32477,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58378" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61573" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
