@@ -1631,6 +1631,11 @@ a:hover {
   flex: 1 0 auto;
   padding: 10px 0 0 0;
 }
+.repo-flex-container .repo-component .repo-component-detail .demo-link {
+  font-size: 0.8em;
+  color: #0366d6;
+  font-weight: 600;
+}
 .repo-flex-container .repo-component .repo-component-meta {
   display: flex;
   flex-direction: row;

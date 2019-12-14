@@ -26,6 +26,14 @@ export class Repository extends Component {
                       <Image src={`https://raw.githubusercontent.com/kdashivantha/${repo.name}/master/${repo.name}.gif`} fallbackSrc="http://www.1x1px.me/FFFFFF-0.png"></Image>        
                   }
                   </div>
+                  
+                  {(repo.name && repo.description.includes("...")) &&
+                    <div className="demo-link">
+                      <i className="octicon icon-eye"></i>
+                      <a href={`https://kdashivantha.github.io/${repo.name}/`} target="_blank">DEMO</a>      
+                    </div>  
+                  }
+                  
                 </div>
                 <div className="repo-component-meta">
                   {repo.language &&

@@ -32160,7 +32160,14 @@ function (_Component) {
         }, repo.name && repo.description.includes("...") && _react.default.createElement(_Image.Image, {
           src: "https://raw.githubusercontent.com/kdashivantha/".concat(repo.name, "/master/").concat(repo.name, ".gif"),
           fallbackSrc: "http://www.1x1px.me/FFFFFF-0.png"
-        }))), _react.default.createElement("div", {
+        })), repo.name && repo.description.includes("...") && _react.default.createElement("div", {
+          className: "demo-link"
+        }, _react.default.createElement("i", {
+          className: "octicon icon-eye"
+        }), _react.default.createElement("a", {
+          href: "https://kdashivantha.github.io/".concat(repo.name, "/"),
+          target: "_blank"
+        }, "DEMO"))), _react.default.createElement("div", {
           className: "repo-component-meta"
         }, repo.language && _react.default.createElement("a", {
           href: repo.languages_url,
@@ -32470,7 +32477,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55436" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58098" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
