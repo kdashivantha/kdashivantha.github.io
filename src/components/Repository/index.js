@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Image } from "../Image";
 import './style.scss';
 
 export class Repository extends Component {
@@ -7,9 +8,9 @@ export class Repository extends Component {
     return (
       <div className="repo-flex-container">
         {
-          repos.map(repo => (
-            !repo.fork &&
-              <div className="repo-component">
+          repos.map((repo, key) => (
+            (!repo.fork && repo.description && repo.description.includes("..")) &&
+              <div className="repo-component" key={key}>
                 <div className="repo-component-head">
                   <h1 className="repo-component-title">
                     <a className="repo-component--repolink" href={repo.html_url}>
@@ -21,8 +22,8 @@ export class Repository extends Component {
                 <div className="repo-component-detail">
                   {repo.description}
                   <div className="gif-image">
-                  {repo.name &&
-                    <img src={`https://raw.githubusercontent.com/kdashivantha/${repo.name}/master/${repo.name}.gif`} alt="" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/kdashivantha/kanban-ng-drag-drop/master/kanban-ng-drag-drop.gif';" width="100%"></img>
+                  {(repo.name && repo.description.includes("...")) &&
+                      <Image src={`https://raw.githubusercontent.com/kdashivantha/${repo.name}/master/${repo.name}.gif`} fallbackSrc="http://www.1x1px.me/FFFFFF-0.png"></Image>        
                   }
                   </div>
                 </div>
