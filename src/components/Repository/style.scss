@@ -62,5 +62,19 @@
                 border-radius: 16px;
             }
         }
+        .repo-component-tags {
+            display: flex;
+            flex-direction: row;
+            padding-top: 10px;
+            .repo-component__tag {
+                color: #FFF;
+                font-size: 11px;
+                padding: 3px 7px 4px;
+                border-radius: 16px;
+                margin: 0px 5px;
+                background-color: #3ac8ac;
+                cursor: default;
+            }
+        }
     }
 }

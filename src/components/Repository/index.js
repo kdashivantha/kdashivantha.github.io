@@ -3,6 +3,14 @@ import { Image } from "../Image";
 import './style.scss';
 
 export class Repository extends Component {
+
+  descriptionWithoutTags(description) {
+    return description.replace(/\[(.*?)\]/g,"");
+  }
+  descriptionExtractTags(description) {
+    let tags = description.match(/\[(.*?)\]/g);
+    return (tags != null)? tags[0].replace(/\[|\]/g,'').split(','): [];
+  }
   render() {
     const repos = this.props.repos;
     return (
@@ -20,7 +28,14 @@ export class Repository extends Component {
                   </h1>
                 </div>
                 <div className="repo-component-detail">
-                  {repo.description}
+                  { this.descriptionWithoutTags(repo.description) }
+                  <div className="repo-component-tags">
+                  {
+                    this.descriptionExtractTags(repo.description).map(tag => ( 
+                      <div className="repo-component__tag">{tag}</div>
+                    ))
+                  }
+                  </div>
                   <div className="gif-image">
                   {(repo.name && repo.description.includes("...")) &&
                       <Image src={`https://raw.githubusercontent.com/kdashivantha/${repo.name}/master/${repo.name}.gif`} fallbackSrc="http://www.1x1px.me/FFFFFF-0.png"></Image>        
