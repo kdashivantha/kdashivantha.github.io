@@ -3,7 +3,10 @@ import './style.scss';
 
 export class Profile extends Component {
   render() {
-    const { avatar_url, bio, login, name, company, blog, location, email} = this.props.user
+    const { avatar_url, bio, login, name, company, blog, location, email} = this.props.user;
+    const myemail = "kdashivantha@gmail.com";
+    const linkedin = "https://www.linkedin.com/in/amith-shivantha-b1661ab/";
+
     return (
       <div id="card-user">
         <div className="header"></div>
@@ -24,11 +27,19 @@ export class Profile extends Component {
               @{login}
             </a>
           </div>
-          { email && 
+          { myemail && 
             <div className="user-details-list-item" data-user-email>
               <i className="octicon icon-mail"></i>
-              <a className="user-details-list-item-content" href="mailto:{email}">
-                {email}
+              <a className="user-details-list-item-content" href={`mailto:${myemail}`}>
+                {myemail}
+              </a>
+            </div>
+          }
+          { linkedin &&
+            <div className="user-details-list-item" data-user-linkedin>
+              <i className="octicon icon-mortar-board"></i>
+              <a className="user-details-list-item-content" rel="username" href={linkedin}>
+              linkedin.com/amith-shivantha
               </a>
             </div>
           }
