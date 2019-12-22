@@ -31869,6 +31869,8 @@ function (_Component) {
           blog = _this$props$user.blog,
           location = _this$props$user.location,
           email = _this$props$user.email;
+      var myemail = "kdashivantha@gmail.com";
+      var linkedin = "https://www.linkedin.com/in/amith-shivantha-b1661ab/";
       return _react.default.createElement("div", {
         id: "card-user"
       }, _react.default.createElement("div", {
@@ -31898,15 +31900,24 @@ function (_Component) {
         className: "user-details-list-item-content",
         rel: "username",
         href: "https://github.com/".concat(login)
-      }, "@", login)), email && _react.default.createElement("div", {
+      }, "@", login)), myemail && _react.default.createElement("div", {
         className: "user-details-list-item",
         "data-user-email": true
       }, _react.default.createElement("i", {
         className: "octicon icon-mail"
       }), _react.default.createElement("a", {
         className: "user-details-list-item-content",
-        href: "mailto:{email}"
-      }, email)), location && _react.default.createElement("div", {
+        href: "mailto:".concat(myemail)
+      }, myemail)), linkedin && _react.default.createElement("div", {
+        className: "user-details-list-item",
+        "data-user-linkedin": true
+      }, _react.default.createElement("i", {
+        className: "octicon icon-mortar-board"
+      }), _react.default.createElement("a", {
+        className: "user-details-list-item-content",
+        rel: "username",
+        href: linkedin
+      }, "linkedin.com/amith-shivantha")), location && _react.default.createElement("div", {
         className: "user-details-list-item",
         "data-user-location": true
       }, _react.default.createElement("i", {
@@ -32135,8 +32146,21 @@ function (_Component) {
   }
 
   _createClass(Repository, [{
+    key: "descriptionWithoutTags",
+    value: function descriptionWithoutTags(description) {
+      return description.replace(/\[(.*?)\]/g, "");
+    }
+  }, {
+    key: "descriptionExtractTags",
+    value: function descriptionExtractTags(description) {
+      var tags = description.match(/\[(.*?)\]/g);
+      return tags != null ? tags[0].replace(/\[|\]/g, '').split(',') : [];
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this = this;
+
       var repos = this.props.repos;
       return _react.default.createElement("div", {
         className: "repo-flex-container"
@@ -32155,7 +32179,13 @@ function (_Component) {
           className: "octicon icon-repo"
         }), repo.full_name))), _react.default.createElement("div", {
           className: "repo-component-detail"
-        }, repo.description, _react.default.createElement("div", {
+        }, _this.descriptionWithoutTags(repo.description), _react.default.createElement("div", {
+          className: "repo-component-tags"
+        }, _this.descriptionExtractTags(repo.description).map(function (tag) {
+          return _react.default.createElement("div", {
+            className: "repo-component__tag"
+          }, tag);
+        })), _react.default.createElement("div", {
           className: "gif-image"
         }, repo.name && repo.description.includes("...") && _react.default.createElement(_Image.Image, {
           src: "https://raw.githubusercontent.com/kdashivantha/".concat(repo.name, "/master/").concat(repo.name, ".gif"),
@@ -32477,7 +32507,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61573" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64762" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
